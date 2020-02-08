@@ -71,27 +71,31 @@ namespace NetcoreClient
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
                     options.ClientId = "netcoremvcclient";
-                    options.ResponseType = "id_token token";
+                    options.ClientSecret = "secret";
+                    options.ResponseType = "code id_token";
                     options.SaveTokens = true;
-                    //options.Scope.Add("openid");
+                    options.GetClaimsFromUserInfoEndpoint = true;
+                    //options.Scope.Add("offline_access");
+                    options.Scope.Add("email");
+                    options.Scope.Add("api");
                     /*
                      默认值是:id_token
                      */
                     //options.ResponseType = OpenIdConnectResponseType.CodeIdToken;
-                    options.Events = new OpenIdConnectEvents
-                    {
-                        /*
-                         远程异常触发
-                         在授权服务器取消登陆或者取消授权      
-                         */
-                        OnRemoteFailure = OAuthFailureHandler =>
-                        {
-                            //跳转首页
-                            OAuthFailureHandler.Response.Redirect("/");
-                            OAuthFailureHandler.HandleResponse();
-                            return Task.FromResult(0);
-                        }
-                    };
+                    //options.Events = new OpenIdConnectEvents
+                    //{
+                    //    /*
+                    //     远程异常触发
+                    //     在授权服务器取消登陆或者取消授权      
+                    //     */
+                    //    OnRemoteFailure = OAuthFailureHandler =>
+                    //    {
+                    //        //跳转首页
+                    //        OAuthFailureHandler.Response.Redirect("/");
+                    //        OAuthFailureHandler.HandleResponse();
+                    //        return Task.FromResult(0);
+                    //    }
+                    //};
                     /***********************************相关事件***********************************/
                     // 未授权时，重定向到OIDC服务器时触发
                     //o.Events.OnRedirectToIdentityProvider = context => Task.CompletedTask;
