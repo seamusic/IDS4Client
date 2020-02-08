@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework45Client", "Framew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFormPostClient", "MvcFormPostClient\MvcFormPostClient.csproj", "{BFFBDA66-FFFA-43FD-99E8-9E86B36732E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{420274CE-0264-4802-A2A9-D38874263353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BFFBDA66-FFFA-43FD-99E8-9E86B36732E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFFBDA66-FFFA-43FD-99E8-9E86B36732E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFFBDA66-FFFA-43FD-99E8-9E86B36732E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420274CE-0264-4802-A2A9-D38874263353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420274CE-0264-4802-A2A9-D38874263353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420274CE-0264-4802-A2A9-D38874263353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420274CE-0264-4802-A2A9-D38874263353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
